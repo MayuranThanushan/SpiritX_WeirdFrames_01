@@ -102,12 +102,3 @@ create table users (
 ✅ Auto-Redirect on Successful Signup/Login 🔄  
 ✅ Protected Routes (Dashboard access only for logged-in users) 🛡️  
 ✅ Tailwind CSS for a sleek and responsive UI 🎨  
-
-## 🤝 Contribution Guidelines
-
-If you’d like to contribute:
-
-1. Fork the repository
-2. Create a new branch (`feature-branch`)
-3. Commit your changes
-4. Open a pull request

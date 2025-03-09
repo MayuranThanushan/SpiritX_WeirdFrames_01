@@ -15,7 +15,7 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={
-              <PrivateRoute>
+              <PrivateRoute>  
                 <Dashboard />
               </PrivateRoute>
             } />
