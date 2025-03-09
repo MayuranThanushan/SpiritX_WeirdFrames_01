@@ -54,19 +54,6 @@ The application will be available at `http://localhost:5173/`.
 
 SpiritX_WeirdFrames_01 uses **Supabase** as the authentication and database backend. The Supabase client is initialized in `src/lib/supabase.ts`:
 
-```ts
-import { createClient } from '@supabase/supabase-js';
-
-export const supabase = createClient(
-  'https://exylsuhsmfupnpilqwdu.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV4eWxzdWhzbWZ1cG5waWxxd2R1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE1MTI0ODEsImV4cCI6MjA1NzA4ODQ4MX0.8vK2U3ZWBesmIEyI6-YTRSI7wQmOb-yw-JwdUP58nCU'
-);
-
-export function isSupabaseConfigured(): boolean {
-  return true; 
-}
-```
-
 If you want to use environment variables instead of hardcoded credentials, modify `supabase.ts` like this:
 
 ```ts
@@ -124,7 +111,3 @@ If you’d like to contribute:
 2. Create a new branch (`feature-branch`)
 3. Commit your changes
 4. Open a pull request
-
----
-
-💡 **Need Help?** Contact me at [your-email@example.com](mailto:your-email@example.com) or open an issue on GitHub!
