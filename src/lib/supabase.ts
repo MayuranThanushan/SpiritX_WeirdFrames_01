@@ -1,10 +1,13 @@
 import { createClient } from '@supabase/supabase-js';
+import dotenv from 'dotenv';
 
-export const supabase = createClient(
-  'https://exylsuhsmfupnpilqwdu.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV4eWxzdWhzbWZ1cG5waWxxd2R1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE1MTI0ODEsImV4cCI6MjA1NzA4ODQ4MX0.8vK2U3ZWBesmIEyI6-YTRSI7wQmOb-yw-JwdUP58nCU'
-);
+dotenv.config();
+
+const supabaseUrl = process.env.SUPABASE_URL || '';
+const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || '';
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export function isSupabaseConfigured(): boolean {
-  return true; 
+  return supabaseUrl !== '' && supabaseAnonKey !== '';
 }
